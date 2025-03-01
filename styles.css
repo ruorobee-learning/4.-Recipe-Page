@@ -105,7 +105,7 @@ h2 {
     font-weight: 400;
 }
 
-h3 {
+.prep-time-header {
     font-size: var(--font-h3);
     color: var(--color-rose-800);
     font-family: "Outfit";
