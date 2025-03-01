@@ -110,13 +110,14 @@ h3 {
     color: var(--color-rose-800);
     font-family: "Outfit";
     font-weight: 600;
+    margin-bottom: var(--space-80);
 }
 
 hr {
     border: none;
     border-top: 1px solid var(--color-stone-150);
     width: 100%;
-    margin: 4px;
+    margin: 4px 0;
 }
 
 p,
@@ -203,17 +204,16 @@ td[data-cell="nutritional-value"] {
     color: var(--color-brown-800);
 }
 
-
 /* Media Query */
 @media screen and (max-width: 450px) {
     body {
         padding: 0;
     }
-    
+
     .container {
         width: 100%;
         padding: 0;
-        border-radius: 0%;
+        border-radius: 0;
         gap: 0;
         border: none;
     }
@@ -243,5 +243,15 @@ td[data-cell="nutritional-value"] {
     .preparation-time {
         padding: var(--space-160) var(--space-240);
         border-radius: var(--space-80);
+    }
+
+    ul,
+    ol {
+        padding-left: var(--space-160);
+        margin-left: 4px;
+    }
+
+    li {
+        padding-left: var(--space-80);
     }
 }
