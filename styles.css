@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+:root {
+    /* Color */
+    --color-white: #FFFFFF;
+    --color-stone-100: #F3E5D8;
+    --color-stone-150: #E4DED8;
+    --color-stone-600: #5F574E;
+    --color-stone-900: #302D2C;
+    --color-brown-800: #854632;
+    --color-rose-50: #FFF5FA;
+    --color-rose-800: #7B284F;
+
+    /* Spacing */
+    --space-400: 40px;
+    --space-320: 32px;
+    --space-240: 24px;
+    --space-160: 16px;
+    --space-120: 12px;
+    --space-80: 8px;
+
+    /* Font Sizing */
+    --font-h1: 40px;
+    --font-h2: 28px;
+    --font-h3: 20px;
+    --font-body: 16px;
+}
+
+body {
+    background-color: var(--color-stone-100);
+    font-family: "Outfit", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 120px;
+}
+
+.container {
+    width: 736px;
+    padding: var(--space-400);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--space-320);
+    border-radius: var(--space-240);
+    border: 1px solid var(--color-stone-150);
+    background: var(--color-white);
+    box-shadow: 0px 83px 23px 0px rgba(0, 0, 0, 0.00), 0px 53px 21px 0px rgba(0, 0, 0, 0.01), 0px 30px 18px 0px rgba(0, 0, 0, 0.03), 0px 13px 13px 0px rgba(0, 0, 0, 0.04), 0px 3px 7px 0px rgba(0, 0, 0, 0.05);
+}
+
+img {
+    width: 100%;
+    height: 300px;
+    border-radius: var(--space-120);
+    object-fit: cover;
+}
+
+.recipe,
+.title-and-description,
+.content,
+.introduction,
+.ingredients,
+.instructions,
+.nutrition {
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe {
+    gap: var(--space-320);
+}
+
+.title-and-description {
+    gap: var(--space-160);
+}
+
+.content {
+    gap: var(--space-240);
+}
+
+h1,
+h2,
+h3 {
+    font-style: normal;
+    line-height: 135%;
+}
+
+h1 {
+    font-size: var(--font-h1);
+    color: var(--color-stone-900);
+    font-family: "Young Serif";
+    font-weight: 400;
+}
+
+h2 {
+    font-size: var(--font-h2);
+    color: var(--color-brown-800);
+    font-family: "Young Serif";
+    font-weight: 400;
+}
+
+h3 {
+    font-size: var(--font-h3);
+    color: var(--color-rose-800);
+    font-family: "Outfit";
+    font-weight: 600;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--color-stone-150);
+    width: 100%;
+    margin: 4px;
+}
+
+p,
+li {
+    color: var(--color-stone-600);
+    font-family: Outfit;
+    font-size: var(--font-body);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+ul,
+ol {
+    list-style-position: outside;
+    padding-left: var(--space-240);
+    margin-left: 0;
+}
+
+li {
+    position: relative;
+    padding-left: var(--space-160);
+    padding-right: var(--space-160);
+    color: var(--color-stone-600);
+    margin-bottom: var(--space-160);
+}
+
+li:last-of-type {
+    margin-bottom: 0;
+}
+
+li::marker {
+    color: var(--color-brown-800);
+    font-weight: 600;
+    position: absolute;
+}
+
+.preparation-time {
+    padding: var(--space-240) var(--space-320);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-80);
+    align-self: stretch;
+    border-radius: var(--space-120);
+    background: var(--color-rose-50);
+}
+
+.preparation-time li::marker {
+    color: var(--color-rose-800);
+}
+
+.introduction {
+    gap: var(--space-320);
+}
+
+.ingredients,
+.instructions,
+.nutrition {
+    gap: var(--space-160);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    border-bottom: 1px solid var(--color-stone-150);
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+td,
+th {
+    padding: var(--space-160);
+    color: var(--color-stone-600);
+}
+
+td[data-cell="nutritional-value"] {
+    font-weight: 600;
+    color: var(--color-brown-800);
+}
+
+
+/* Media Query */
+@media screen and (max-width: 450px) {
+    body {
+        padding: 0;
+    }
+    
+    .container {
+        width: 100%;
+        padding: 0;
+        border-radius: 0%;
+        gap: 0;
+        border: none;
+    }
+
+    img {
+        max-height: 171px;
+        border-radius: 0;
+    }
+
+    .recipe {
+        padding: var(--space-320);
+    }
+
+    h1 {
+        font-size: 36px;
+        line-height: 110%;
+    }
+
+    .introduction {
+        gap: var(--space-240);
+    }
+
+    .title-and-description {
+        gap: var(--space-120);
+    }
+
+    .preparation-time {
+        padding: var(--space-160) var(--space-240);
+        border-radius: var(--space-80);
+    }
+}
